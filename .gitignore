@@ -1,0 +1,8 @@
+venv-resume/
+__pycache__/
+*.py[cod]
+.DS_Store
+.cache/
+.pytest_cache/
+.idea/
+.vscode/
