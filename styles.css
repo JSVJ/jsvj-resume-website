@@ -258,35 +258,68 @@ select {
 }
 
 .theme-switcher {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 2px;
-  padding: 3px;
+}
+
+.theme-trigger {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(0, 0, 0, 0.18);
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 900;
 }
 
-.theme-switcher button {
-  min-height: 32px;
-  padding: 6px 9px;
+.theme-trigger:hover,
+.theme-trigger:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+
+.theme-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 15;
+  min-width: 168px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.theme-menu button {
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 10px;
   border: 0;
   border-radius: calc(var(--radius) - 3px);
   background: transparent;
   color: var(--muted);
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 0.72rem;
-  font-weight: 900;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-align: left;
 }
 
-.theme-switcher button:hover,
-.theme-switcher button:focus-visible {
+.theme-menu button:hover,
+.theme-menu button:focus-visible {
   color: var(--accent);
+  background: rgba(117, 255, 201, 0.08);
   outline: none;
 }
 
-.theme-switcher button[aria-pressed="true"] {
+.theme-menu button[aria-checked="true"] {
   background: var(--accent);
   color: var(--on-accent);
 }
@@ -949,6 +982,16 @@ h3 {
   color: var(--muted);
 }
 
+.credential-list p + p {
+  margin-top: 12px;
+}
+
+.credential-list a {
+  color: var(--accent);
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
 .publication-list {
   display: grid;
   gap: 14px;
@@ -978,6 +1021,35 @@ h3 {
   font-family: var(--mono);
   font-size: 0.82rem;
   font-weight: 800;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.publication-links a {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgba(117, 255, 201, 0.06);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.publication-links a:hover,
+.publication-links a:focus-visible {
+  border-color: var(--accent);
+  color: var(--ink);
+  outline: none;
 }
 
 .publication-card span {

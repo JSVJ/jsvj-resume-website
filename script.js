@@ -6,13 +6,25 @@
   const toast = document.querySelector("[data-toast]");
   const copyButton = document.querySelector("[data-copy-email]");
   const themeButtons = Array.from(document.querySelectorAll("[data-theme-option]"));
+  const themeSwitcher = document.querySelector("[data-theme-switcher]");
+  const themeTrigger = document.querySelector("[data-theme-trigger]");
+  const themeMenu = document.querySelector("#theme-menu");
+
+  const closeThemeMenu = () => {
+    if (!themeMenu || !themeTrigger) {
+      return;
+    }
+
+    themeMenu.hidden = true;
+    themeTrigger.setAttribute("aria-expanded", "false");
+  };
 
   const setTheme = (theme) => {
     const selectedTheme = ["dark", "light", "colorblind"].includes(theme) ? theme : "dark";
     document.documentElement.dataset.theme = selectedTheme;
 
     themeButtons.forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.getAttribute("data-theme-option") === selectedTheme));
+      button.setAttribute("aria-checked", String(button.getAttribute("data-theme-option") === selectedTheme));
     });
 
     try {
@@ -27,8 +39,29 @@
   themeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       setTheme(button.getAttribute("data-theme-option"));
+      closeThemeMenu();
     });
   });
+
+  if (themeTrigger && themeMenu) {
+    themeTrigger.addEventListener("click", () => {
+      const isOpen = themeMenu.hidden;
+      themeMenu.hidden = !isOpen;
+      themeTrigger.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (themeSwitcher && !themeSwitcher.contains(event.target)) {
+        closeThemeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeThemeMenu();
+      }
+    });
+  }
 
   if (year) {
     year.textContent = new Date().getFullYear();

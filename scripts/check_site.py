@@ -25,6 +25,12 @@ REQUIRED_TEXT = [
     "Research publications",
     "Confidential",
     "High-contrast",
+    "automating machine learning development and deployment",
+    "International Journal of Advanced Science and Technology",
+    "http://sersc.org/journals/index.php/IJAST/article/view/6552",
+    "https://ieeexplore.ieee.org/abstract/document/8929977",
+    "https://github.com/JSVJ/adviser-model",
+    "https://ieeexplore.ieee.org/document/9268381",
 ]
 
 

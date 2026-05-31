@@ -52,10 +52,15 @@
           <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
           <a href="#research">Research</a>
-          <div class="theme-switcher" role="group" aria-label="Color theme">
-            <button type="button" data-theme-option="dark" aria-pressed="true">Dark</button>
-            <button type="button" data-theme-option="light" aria-pressed="false">Light</button>
-            <button type="button" data-theme-option="colorblind" aria-pressed="false">High-contrast</button>
+          <div class="theme-switcher" data-theme-switcher>
+            <button class="theme-trigger" type="button" aria-expanded="false" aria-controls="theme-menu" aria-label="Select color theme" data-theme-trigger>
+              <span aria-hidden="true">◐</span>
+            </button>
+            <div class="theme-menu" id="theme-menu" role="menu" aria-label="Color theme" hidden>
+              <button type="button" role="menuitemradio" data-theme-option="dark" aria-checked="true">Dark</button>
+              <button type="button" role="menuitemradio" data-theme-option="light" aria-checked="false">Light</button>
+              <button type="button" role="menuitemradio" data-theme-option="colorblind" aria-checked="false">High-contrast</button>
+            </div>
           </div>
           <a href="#contact" class="nav-cta">Contact</a>
         </div>
@@ -325,8 +330,13 @@
           </div>
           <div class="credential-list">
             <article>
-            <h3>Master of Science in Information &amp; Data Science</h3>
+              <h3>Master of Science in Information &amp; Data Science</h3>
               <p>King Mongkut's University of Technology North Bangkok, Thailand - 2020 - CGPA 4.0 / 4.0</p>
+              <p>
+                Completed research on automating machine learning development and deployment, resulting in a thesis
+                indexed in the Scopus-listed International Journal of Advanced Science and Technology.
+                <a href="http://sersc.org/journals/index.php/IJAST/article/view/6552" target="_blank" rel="noopener">View thesis publication</a>.
+              </p>
             </article>
             <article>
               <h3>Bachelor of Technology in Electronics &amp; Communication Engineering</h3>
@@ -348,18 +358,28 @@
               <div>
                 <h3>A Breakup Machine Learning Approach for Breast Cancer Prediction</h3>
                 <p>IEEE, 2019</p>
+                <div class="publication-links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/8929977" target="_blank" rel="noopener">IEEE publication</a>
+                </div>
               </div>
             </article>
             <article class="publication-card">
               <div>
                 <h3>An Automated Data Exploration Model using Machine Learning</h3>
                 <p>IJAST, 2019</p>
+                <div class="publication-links">
+                  <a href="http://sersc.org/journals/index.php/IJAST/article/view/6552" target="_blank" rel="noopener">IJAST publication</a>
+                  <a href="https://github.com/JSVJ/adviser-model" target="_blank" rel="noopener">GitHub repository</a>
+                </div>
               </div>
             </article>
             <article class="publication-card">
               <div>
                 <h3>Feature Distillation of High Dimensional Datasets: Dimension Contraction and Component Dilation</h3>
                 <p>IEEE, 2020</p>
+                <div class="publication-links">
+                  <a href="https://ieeexplore.ieee.org/document/9268381" target="_blank" rel="noopener">IEEE publication</a>
+                </div>
               </div>
             </article>
             <article class="publication-card confidential">
