@@ -1,6 +1,6 @@
-# Sabari Jaikrishnan Resume Website
+# Sabari Jaikrishnan Portfolio Website
 
-A static, recruiter-focused portfolio and resume website built for GitHub Pages.
+A static professional portfolio for production AI and ML systems work, built for GitHub Pages.
 
 ## Local Setup
 

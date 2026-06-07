@@ -15,7 +15,13 @@ REQUIRED_FILES = [
     ROOT / "reference" / "Vish Potrait.png",
 ]
 REQUIRED_TEXT = [
-    "Staff AI / ML Engineer",
+    "Production AI &amp; ML Systems Architect",
+    "Production AI &amp; ML Systems Portfolio",
+    "Explore Systems",
+    "Connect on LinkedIn",
+    "View Resume",
+    "Professional network",
+    "Connect around production AI, applied ML, and intelligent systems.",
     "40+ hrs",
     "80%",
     "16%",
@@ -31,6 +37,18 @@ REQUIRED_TEXT = [
     "https://ieeexplore.ieee.org/abstract/document/8929977",
     "https://github.com/JSVJ/adviser-model",
     "https://ieeexplore.ieee.org/document/9268381",
+]
+FORBIDDEN_TEXT = [
+    "Recruiter-ready",
+    "Need a Staff AI engineer",
+    "open to roles",
+    "Email Me",
+    "Download Resume",
+    "actively looking",
+    "job search",
+    "open to work",
+    "hire me",
+    "available for roles",
 ]
 
 
@@ -67,6 +85,10 @@ def main() -> None:
     for text in REQUIRED_TEXT:
         if text not in html:
             problems.append(f"Missing required text: {text}")
+
+    for text in FORBIDDEN_TEXT:
+        if text.lower() in html.lower():
+            problems.append(f"Forbidden visible-positioning text is still present: {text}")
 
     parser = LinkParser()
     parser.feed(html)

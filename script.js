@@ -34,7 +34,7 @@
     }
   };
 
-  setTheme(document.documentElement.dataset.theme || "dark");
+  setTheme(document.documentElement.dataset.theme || "light");
 
   themeButtons.forEach((button) => {
     button.addEventListener("click", () => {
