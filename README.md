@@ -29,6 +29,34 @@ Run the lightweight static checks:
 python scripts/check_site.py
 ```
 
+## Updating the Resume PDF
+
+The "View Resume" button and link on the site always point to:
+
+```text
+reference/Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf
+```
+
+Whenever you have a newer resume export, publish it with one command:
+
+```bash
+scripts/update_resume.sh /path/to/your-new-resume.pdf
+```
+
+This copies the file into place under that same filename, runs the static
+site checks, commits the change, and pushes it — GitHub Pages picks up the
+new PDF on the next deploy (usually under a minute). The link itself never
+changes, so there's nothing to update in `index.html`.
+
+If you'd rather do it by hand:
+
+```bash
+cp /path/to/your-new-resume.pdf "reference/Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf"
+git add reference/Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf
+git commit -m "Update published resume PDF"
+git push
+```
+
 ## GitHub Pages Deployment
 
 This site has no build step. Commit the repository contents and deploy from the repository root.
