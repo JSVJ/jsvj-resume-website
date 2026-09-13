@@ -29,33 +29,20 @@ Run the lightweight static checks:
 python scripts/check_site.py
 ```
 
-## Updating the Resume PDF
+## Updating the Resume
 
-The "View Resume" button and link on the site always point to:
+The "View Resume" button and link on the site point to a Google Drive file:
 
 ```text
-reference/Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf
+https://drive.google.com/file/d/1X4w_jYQZneR_6IWnPjIOBt7MImOOOy7i/view?usp=sharing
 ```
 
-Whenever you have a newer resume export, publish it with one command:
+To publish a newer resume, replace the file at that same Google Drive link
+(keeping the same sharing link). Nothing in the repo needs to change.
 
-```bash
-scripts/update_resume.sh /path/to/your-new-resume.pdf
-```
-
-This copies the file into place under that same filename, runs the static
-site checks, commits the change, and pushes it — GitHub Pages picks up the
-new PDF on the next deploy (usually under a minute). The link itself never
-changes, so there's nothing to update in `index.html`.
-
-If you'd rather do it by hand:
-
-```bash
-cp /path/to/your-new-resume.pdf "reference/Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf"
-git add reference/Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf
-git commit -m "Update published resume PDF"
-git push
-```
+Note: `scripts/update_resume.sh` still exists for copying a PDF into
+`reference/`, but it no longer affects the live "View Resume" link since that
+link now points to Google Drive instead of a local file.
 
 ## GitHub Pages Deployment
 

@@ -11,7 +11,6 @@ INDEX = ROOT / "index.html"
 REQUIRED_FILES = [
     ROOT / "styles.css",
     ROOT / "script.js",
-    ROOT / "reference" / "Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf",
     ROOT / "reference" / "Vish Potrait.png",
 ]
 REQUIRED_TEXT = [
