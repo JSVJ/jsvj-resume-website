@@ -14,15 +14,14 @@ REQUIRED_FILES = [
     ROOT / "reference" / "Vish Potrait.png",
 ]
 REQUIRED_TEXT = [
-    "Staff AI / ML Engineer &amp; Staff Data Scientist",
-    "Staff AI / ML Engineer | Staff Data Scientist",
+    "Staff AI/ML Engineer",
     "Explore Systems",
     "Connect on LinkedIn",
     "View Resume",
     "Professional network",
     "Connect around production AI, applied ML, and intelligent systems.",
-    "40+ hrs",
-    "30K → 32K",
+    "6.7%",
+    "1,000+",
     "16%",
     "~$12M",
     "jsvishnuj@gmail.com",
