@@ -1093,6 +1093,25 @@ h3 {
   color: var(--muted);
 }
 
+.contact-box .resume-note {
+  margin-top: 16px;
+  color: var(--ink);
+}
+
+.contact-box .contact-email {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.contact-email a {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  overflow-wrap: anywhere;
+}
+
 .contact-actions {
   justify-content: flex-end;
 }

@@ -29,20 +29,11 @@ Run the lightweight static checks:
 python scripts/check_site.py
 ```
 
-## Updating the Resume
+## Resume
 
-The "View Resume" button and link on the site point to a Google Drive file:
-
-```text
-https://drive.google.com/file/d/1X4w_jYQZneR_6IWnPjIOBt7MImOOOy7i/view?usp=sharing
-```
-
-To publish a newer resume, replace the file at that same Google Drive link
-(keeping the same sharing link). Nothing in the repo needs to change.
-
-Note: `scripts/update_resume.sh` still exists for copying a PDF into
-`reference/`, but it no longer affects the live "View Resume" link since that
-link now points to Google Drive instead of a local file.
+The site intentionally does not link to a resume. Visitors who want one can
+reach out by email or LinkedIn. `scripts/check_site.py` fails if a
+"View Resume"/"Download Resume" link or a resume PDF reference is added back.
 
 ## GitHub Pages Deployment
 
@@ -62,6 +53,5 @@ The deployable files are:
 - `script.js`
 - `.nojekyll`
 - `reference/Vish Potrait.png`
-- `reference/Sabari_Jaikrishnan_StaffAIEngineer_EA_Resume.pdf`
 
 The `venv-resume/` folder is for local development only and is intentionally ignored by Git.

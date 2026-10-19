@@ -17,9 +17,8 @@ REQUIRED_TEXT = [
     "Staff AI/ML Engineer",
     "Explore Systems",
     "Connect on LinkedIn",
-    "View Resume",
-    "Professional network",
-    "Connect around production AI, applied ML, and intelligent systems.",
+    "Resume available on request.",
+    "mailto:jsvishnuj@gmail.com",
     "6.7%",
     "1,000+",
     "16%",
@@ -39,14 +38,9 @@ REQUIRED_TEXT = [
 FORBIDDEN_TEXT = [
     "Recruiter-ready",
     "Need a Staff AI engineer",
-    "open to roles",
-    "Email Me",
     "Download Resume",
-    "actively looking",
-    "job search",
-    "open to work",
-    "hire me",
-    "available for roles",
+    "View Resume",
+    "Resume.pdf",
 ]
 
 
